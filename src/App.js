@@ -25,9 +25,13 @@ const App = () => {
     },
   ];
 
+  const UpdateExpenseData = (newExpenseData) => {
+    console.log(newExpenseData);
+  };
+
   return (
     <Card>
-      <NewExpense />
+      <NewExpense onUpdatingExpenseData={UpdateExpenseData} />
       <Expenses expenseData={expenses} />
     </Card>
   );
