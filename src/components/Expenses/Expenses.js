@@ -17,9 +17,9 @@ function Expenses(props) {
         selectedYear={filteredYear}
         OnChangeFilter={ChangeFilterHandler}
       />
-      <ExpenseItem expenseData={props.expenseData[0]} />
-      <ExpenseItem expenseData={props.expenseData[1]} />
-      <ExpenseItem expenseData={props.expenseData[2]} />
+      {props.expenseData.map((expense) => (
+        <ExpenseItem expenseData={expense} />
+      ))}
     </Card>
   );
 }
