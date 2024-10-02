@@ -26,10 +26,10 @@ const INITIAL_EXPENSE = [
 ];
 
 const App = () => {
-  const [expenses, setExpenses] = useState(INITIAL_EXPENSE);
+  const [expenses, SetExpenses] = useState(INITIAL_EXPENSE);
 
   const UpdateExpenseData = (newExpense) => {
-    setExpenses((prevState) => {
+    SetExpenses((prevState) => {
       return [newExpense, ...prevState];
     });
   };
